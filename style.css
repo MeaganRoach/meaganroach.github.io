@@ -1,0 +1,283 @@
+
+
+/* CSS STYLE FOR ALL PAGES =========================================================================== */
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+
+}
+
+.container { /* This just adds extra space between each container */
+    padding: 60px 40px !important;
+}
+
+.navbar {
+    background-color: #b9982f !important;
+}
+.nav-link {
+  font-family: Rubik;
+  font-weight: 400;
+}
+.navbar-brand {
+      font-family: Rubik;
+      font-size: 1.7em;
+      font-weight: 400;
+      padding-left: 20px;
+      padding-top: 13px;
+  }
+
+a.nav-link.active{
+  font-family: Rubik;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+
+  img { /* Forces all images to fill their column, row, or container with 100% width (full width of mobile screen)*/
+    width:100;
+     min-width:100%;
+  }
+
+  .container { /* Adjusts the padding around the container on the mobiel size */
+    padding: 80px 40px !important;
+  }
+}
+
+
+a.line
+{
+    position: relative;
+}
+
+a.line:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ------------------------------------ UNIVERSAL NAVBAR ------------------------------------ */
+
+.navbar-collapse a {
+    color: #000000;
+}
+
+
+ul a { /* Changes the hyerlink color to EVERY hyperlink on the page, removes underline */
+  color: #080614;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover a:link a:visited a:active a:focus { /* Removes underline for hyperlink for ALL states */
+  text-decoration: none;
+  color: #b9982f;
+}
+
+
+/* ------------------------------------ UNIVERSAL BANNER IMAGES & BACKGROUNDS ------------------------------------ */
+
+.center-cropped { /* This automaticallly crops and positions your image to fill the entire vertical screen. Class must be added in HTML doc*/
+  width: 100%;
+  Height: 100vh; /* Makes background images or large banner image fill 100% vertical screen with*/
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.banner-cropped {  /* This automaticallly crops, and positions your image to fill 50% of the vertical screen. Class must be added in HTML doc*/
+  width: 100%;
+  height:50vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+@media (max-width: 767px) {   /* Makes banner image the full vertical height of any mobile screen */
+.center-cropped {
+  width: 100%;
+  height:100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.banner-cropped {  /* Makes banner image 30% vertical height of any mobile screen */
+  width: 100%;
+  height:30vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+}
+
+.bg-1 { /*Changes the color of the section BG to a solid background color*/
+  background: #b9982f;
+  color: #000000; /*color designates body copy color here */
+}
+
+a {
+color: #b9982f;
+}
+
+.bg-1 h1, h2, h3, h4, h5, h6 { /*Because the .bg-1 is dark, this inverses the header text to white */
+  color: #000000;
+}
+
+.nofound-bg { /*This is a fixed image bakground where the content scrolls over it, this class needs to be added in HTML */
+  background-image: url("https://starry-citadel-au.neocities.org/background/spaceship.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+/* ------------------------------------ UNIVERSAL LINK STYLING ------------------------------------ */
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link { /*Makes the Location pills on headcannons section black*/
+    color: #fff;
+    background-color: #000000 !important;
+}
+
+
+.intro { /*This is the large introductory text at the beginning of the webpage. This class needs to be added in the HTML document */
+  font-size: 1.7em;
+  line-height:1.2em;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading a { /* Because the section headers are anchor links (quick jump to this section using then nav), this removes the hyperlink styling from them */
+  margin-bottom: 20px;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+.jitter:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/* ------------------------------------ UNNECCESARY & EXTRA CUSTOMIZATION TO SITE CODE ------------------------------------ */
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.character { /* This gives the character Bio images on the Citadel Citizen Page a slightly tranparent and softer feel */
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+      border-radius: 50%;
+}
+
+.avatar-sm { /* Small CIRCLE avatar image, for use on the fic cards */
+  vertical-align: middle;
+
+  border-radius: 50%;
+    max-width: 50px;
+    min-width: 50px;
+    max-height: 50px;
+    margin-right: 2px;
+    margin-bottom:3px;
+}
+
+.avatar-lg {  /* Small ROUNDED CORNER avatar image, for use on the fic pages and headshot thumbnails*/
+  vertical-align: middle;
+  border-radius: .25rem!important;
+    min-width: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    margin-right: 3px;
+    margin-bottom: 7px;
+}
+
+.textlink a { /* Custom hyperlink colors for use in-text, this class needs to be added in HTML Doc */
+  text-decoration: none;
+  font-weight: 700;
+  color:#E8B167 !important;
+}
+
+.quicklink a { /* Custom hyperlink colors for use in-text, this class needs to be added in HTML Doc */
+  color: #bf9600;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.dimension { /* Changes the typeface to Lato wherever this class is added */
+  font-family: lato, sans-serif;
+}
+
+.list-group {
+    padding-left: 0;
+    margin-bottom: 20px;
+    color: #080614;
+}
+
+.nav-tabs { /* This is not the universal nav, but the smaller headcannon nav */
+    padding-left: 15px;
+    margin-bottom: 0;
+    border: none;
+}
+.tab-content {  /* This is not the universal nav, but the smaller headcannon nav */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.twoColumns{ /* This makes the text in the headcannon section two columns instead of one */
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+}
+
+@media (max-width: 767px) { /* Changes the two columns back to one on mobile */
+  .twoColumns{
+      -webkit-column-gap: 20px;
+         -moz-column-gap: 20px;
+              column-gap: 20px;
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1;
+  }
+}
